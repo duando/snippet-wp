@@ -16,16 +16,16 @@ License URI:
 
 
 */
-    //Añade un widget personalizado en el escritorio de WordPress
-	add_action('wp_dashboard_setup','du_anade_widget_personalizado_en_escritorio');
-	function du_anade_widget_personalizado_en_escritorio() {
-		add_meta_box (
-			'du_widget_duando',             // ID del widget
-			'Duando', 			            // Título
-			'du_metabox_personalizado',		// Función a la que "engancharemos" el contenido
-			'dashboard', 				    // Mostrar en el escritorio WP
-			'normal' 					    // Posición en el escritorio
-		);
+//Añade un widget personalizado en el escritorio de WordPress
+add_action('wp_dashboard_setup','du_anade_widget_personalizado_en_escritorio');
+    function du_anade_widget_personalizado_en_escritorio() {
+    add_meta_box (
+        'du_widget_duando',             // ID del widget
+        'Duando', 			            // Título
+        'du_metabox_personalizado',		// Función a la que "engancharemos" el contenido
+        'dashboard', 				    // Mostrar en el escritorio WP
+        'normal' 					    // Posición en el escritorio
+    );
 		
 		// Añadir el contenido al widget
 		function du_metabox_personalizado() {
